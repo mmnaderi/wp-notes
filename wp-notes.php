@@ -46,7 +46,7 @@ function Notes() {
 	<textarea id="note" name="note">'.$note['content'].'</textarea>
 	<div class="actions">
 		<div class="left"><input type="submit" name="publish" id="publish" accesskey="p" class="button-primary" value="ذخیره"></div>
-		<div class="right"><input type="submit" name="save" id="save-post" class="button" value="از نو" onclick="clear_textarea()"></div>
+		<div class="right"><input type="button" name="clear" id="clear" class="button" value="از نو" onclick="document.getElementById("note").value = \'\';"></div>
 	</div>
 	</div>
 	<div class="clearfix"></div>
