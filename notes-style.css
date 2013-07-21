@@ -1,33 +1,35 @@
-textarea#note  { 
-	display: block;
-	padding:15px 15px 30px;
-	font:13px Tahoma, cursive; 
-	line-height:1.5;
-	border:0;
-	border-radius:3px;
+textarea#note {
 	width:100%;
-	background: -webkit-linear-gradient(#F9EFAF, #F7E98D);
-	background: -moz-linear-gradient(#F9EFAF, #F7E98D);
-	background: -o-linear-gradient(#F9EFAF, #F7E98D);
-	background: -ms-linear-gradient(#F9EFAF, #F7E98D);
-	background: linear-gradient(#F9EFAF, #F7E98D);
-	box-shadow:0 4px 6px rgba(0,0,0,0.1);
-	/*overflow:hidden;*/
-	transition:box-shadow 0.5s ease;
-	font-smoothing:subpixel-antialiased;
-	border:1px solid #F7E98D;
+	display:block;
 	max-width:100%;
-	/*max-height:250px;*/
+	line-height:1.5;
+	padding:15px 15px 30px;
+	border-radius:3px;
+	border:1px solid #F7E98D;
+	font:13px Tahoma, cursive;
+	transition:box-shadow 0.5s ease;
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	font-smoothing:subpixel-antialiased;
+	background:linear-gradient(#F9EFAF, #F7E98D);
+	background:-o-linear-gradient(#F9EFAF, #F7E98D);
+	background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+	background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+	background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
 }
 
-textarea:hover { box-shadow:0 5px 8px rgba(0,0,0,0.15); }
-textarea:focus { box-shadow:0 5px 12px rgba(0,0,0,0.2); outline:none; }
-.clearfix:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
+textarea:hover {
+	box-shadow:0 5px 8px rgba(0,0,0,0.15);
+}
+textarea:focus {
+	outline:none;
+	box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+.clearfix:after {
+	height:0;
+	clear:both;
+	content:".";
+	display:block;
+	visibility:hidden;
 }
 .actions {
 	margin-top:15px;
