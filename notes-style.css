@@ -1,14 +1,12 @@
-textarea#note {
-	width:100%;
+.note {
 	display:block;
-	max-width:100%;
-	line-height:1.5;
-	padding:13px;
+	padding:8px 8px 5px;
 	border-radius:3px;
 	border:1px solid #F7E98D;
 	font:13px Tahoma, cursive;
 	transition:box-shadow 0.5s ease;
 	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	box-sizing:border-box;
 	font-smoothing:subpixel-antialiased;
 	background:linear-gradient(#F9EFAF, #F7E98D);
 	background:-o-linear-gradient(#F9EFAF, #F7E98D);
@@ -17,12 +15,21 @@ textarea#note {
 	background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
 }
 
-textarea:hover {
+.note:hover {
 	box-shadow:0 5px 8px rgba(0,0,0,0.15);
 }
-textarea:focus {
+.note:focus {
 	outline:none;
 	box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+#note {
+	width:100%;
+	border:none;
+	display:block;
+	max-width:100%;
+	line-height:1.5;
+	background:transparent;
+	box-shadow:none;
 }
 .clearfix:after {
 	height:0;
@@ -31,12 +38,20 @@ textarea:focus {
 	display:block;
 	visibility:hidden;
 }
-.actions {
+.direction-ltr, .direction-rtl {
 	margin-top:15px;
 }
-.right {
-	float:right;
+.direction-rtl .clear {
+	display:inline-block;
 }
-.left {
+.direction-rtl .save {
 	float:left;
+	display:inline-block;
+}
+.direction-ltr .clear {
+	display:inline-block;
+}
+.direction-ltr .save {
+	float:right;
+	display:inline-block;
 }

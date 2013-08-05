@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Notes\n"
-"POT-Creation-Date: 2013-08-05 18:50+0330\n"
-"PO-Revision-Date: 2013-08-05 18:51+0330\n"
+"POT-Creation-Date: 2013-08-05 19:43+0330\n"
+"PO-Revision-Date: 2013-08-05 19:43+0330\n"
 "Last-Translator: \n"
 "Language-Team: Mohammad Mahdi Naderi <info@mmnaderi.ir>\n"
 "Language: Persian\n"
@@ -22,9 +22,13 @@ msgid "Notes"
 msgstr "یادداشت‌ها"
 
 #: C:\xampp\htdocs\wordpress-en\wp-content\plugins\wp-notes/wp-notes.php:55
+msgid "direction-ltr"
+msgstr "direction-rtl"
+
+#: C:\xampp\htdocs\wordpress-en\wp-content\plugins\wp-notes/wp-notes.php:56
 msgid "Save"
 msgstr "ذخیره"
 
-#: C:\xampp\htdocs\wordpress-en\wp-content\plugins\wp-notes/wp-notes.php:56
+#: C:\xampp\htdocs\wordpress-en\wp-content\plugins\wp-notes/wp-notes.php:57
 msgid "Clear"
 msgstr "از نو"

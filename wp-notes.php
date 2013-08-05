@@ -51,17 +51,28 @@ function Notes() {
 	echo '<form action="" method="POST">
 	<div class="note">
 	<textarea id="note" name="note">'.$note['content'].'</textarea>
-	<div class="actions">
-		<div class="left"><input type="submit" name="publish" id="publish" accesskey="p" class="button-primary" value="'. __("Save", "wpnotes") .'"></div>
-		<div class="right"><input type="button" name="clear" id="clear" class="button" value="'. __("Clear","wpnotes") .'" onclick="document.getElementById(\'note\').value = \'\';"></div>
 	</div>
+	<div class="'. __("direction-ltr","wpnotes") .'">
+		<div class="save"><input type="submit" name="publish" id="publish" accesskey="p" class="button-primary" value="'. __("Save", "wpnotes") .'"></div>
+		<div class="clear"><input type="button" name="clear" id="clear" class="button" value="'. __("Clear","wpnotes") .'" onclick="document.getElementById(\'note\').value = \'\';"></div>
 	</div>
 	<div class="clearfix"></div>
-	</form>';
+	</form>
+	<script type="text/javascript">
+		// <![CDATA[
+		jQuery.noConflict();
+		jQuery(document).ready(function(){			
+			jQuery(\'textarea#note\').elastic();
+			jQuery(\'textarea#note\').trigger(\'update\');
+		});	
+		// ]]>
+	</script>';
 }
 
 function register_styles() {  
 	// Register the style of notes
-	wp_register_style( 'custom-style', plugins_url( '/notes-style.css', __FILE__ ), array(), '20120208', 'all' );    
-	wp_enqueue_style( 'custom-style' );  
+	wp_register_style('custom-style', plugins_url( '/notes-style.css', __FILE__ ), array(), '20120208', 'all');    
+	wp_enqueue_style('custom-style');
+	wp_register_script('custom-js', plugins_url( '/jquery.elastic.source.js', __FILE__ ), array('jquery'), 1.3, false);
+	wp_enqueue_script('custom-js');
 }
