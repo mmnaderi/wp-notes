@@ -223,6 +223,10 @@ input, textarea {
     padding: 5px;
 }
 
+.lrelease {
+	font-size:15px;
+}
+
 /* from http://www.textfixer.com/html/html-table-generator.php */
 
 table.tftable {margin-top:10px;font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}
