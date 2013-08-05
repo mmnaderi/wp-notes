@@ -1,4 +1,4 @@
-WP-Notes
+WP-Notes GitHub Pages
 ========
 
-Sticky Notes Plugin for WordPress
+GitHub Pages for WP-Notes WordPress Plugin
