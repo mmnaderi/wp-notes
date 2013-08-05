@@ -1,16 +1,23 @@
 <?php
 /*
 Plugin Name: WP-Notes
-Plugin URI: https://github.com/mmnaderi/wp-notes
-Description: جایی برای نوشتن یادداشت هایتان
-Version: 1.0
-Author: محمّد مهدی نادری
+Plugin URI: http://mmnaderi.github.io/wp-notes
+Description: A place for your Notes | جایی برای یادداشت هایتان
+Version: 1.0.1
+Author: Mohammad Mahdi Naderi
 Author URI: http://mmnaderi.ir
 License: GPL3
 */
 
 // Include wpnotes_install.php for install plugin
 include 'wpnotes_install.php';
+
+// Load Language File
+add_action( 'admin_init', 'load_lang' );
+function load_lang() {
+	$path = dirname(plugin_basename( __FILE__ )) . '/lang/';
+	$loaded = load_plugin_textdomain( 'wpnotes', false, $path);
+}
 
 // Run the add_notes_widget() function and it's for WordPress Hook
 add_action('wp_dashboard_setup', 'add_notes_widget' );
@@ -34,7 +41,7 @@ define('plugin_url', get_option('siteurl').'/wp-content/plugins/wp-notes');
 
 // Create the Notes Dashboard Widget & run a Notes() function
 function add_notes_widget() {
-	wp_add_dashboard_widget('notes', 'یادداشت‌ها', 'Notes');	
+	wp_add_dashboard_widget('notes', __('Notes', 'wpnotes'), 'Notes');	
 }
 
 // Function that output the contents of our Dashboard Widget
@@ -45,8 +52,8 @@ function Notes() {
 	<div class="note">
 	<textarea id="note" name="note">'.$note['content'].'</textarea>
 	<div class="actions">
-		<div class="left"><input type="submit" name="publish" id="publish" accesskey="p" class="button-primary" value="ذخیره"></div>
-		<div class="right"><input type="button" name="clear" id="clear" class="button" value="از نو" onclick="document.getElementById(\'note\').value = \'\';"></div>
+		<div class="left"><input type="submit" name="publish" id="publish" accesskey="p" class="button-primary" value="'. __("Save", "wpnotes") .'"></div>
+		<div class="right"><input type="button" name="clear" id="clear" class="button" value="'. __("Clear","wpnotes") .'" onclick="document.getElementById(\'note\').value = \'\';"></div>
 	</div>
 	</div>
 	<div class="clearfix"></div>

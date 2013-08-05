@@ -3,7 +3,7 @@ textarea#note {
 	display:block;
 	max-width:100%;
 	line-height:1.5;
-	padding:15px 15px 30px;
+	padding:13px;
 	border-radius:3px;
 	border:1px solid #F7E98D;
 	font:13px Tahoma, cursive;
